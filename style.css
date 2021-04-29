@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+body {
+  background-image: linear-gradient(
+    to right top,
+    #2596be,
+    #1b7aa2,
+    #115f86,
+    #08456a,
+    #002d4e
+  );
+  padding: 30px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+
+.main {
+  background: #fefefe;
+  color: #555555;
+  width: 90%;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.main img {
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #f9f9f9;
+  transition: all 1s ease;
+  animation-name: heartbeat;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+
+.main img:hover {
+  transform: scale(1.1);
+}
+
+.main .topSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.main .topSection a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 0.9;
+}
+.main .topSection a:hover {
+  color: #2596be;
+}
+
+.main .topSection .leftText {
+  text-align: center;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.main .topSection .leftText h1 {
+  font-weight: 400;
+}
+.main .topSection .leftText .info {
+  font-size: 0.7rem;
+  margin-top: 16px;
+}
+.main .topSection .leftText .info strong {
+  margin-right: 16px;
+  display: inline-block;
+}
+
+.leftText button {
+  padding: 10px 25px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  background-color: #fefefe;
+  border-radius: 15px;
+  transition: all 1s ease;
+}
+
+.leftText button:hover {
+  border-color: #2596be;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.main .bottomSection {
+  padding: 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "summary summary"
+    "professionlExperience qualifications"
+    "professionlExperience awards"
+    "professionlExperience skillSet";
+}
+
+#summary {
+  grid-area: summary;
+}
+#qualifications {
+  grid-area: qualifications;
+}
+#professionlExperience {
+  grid-area: professionlExperience;
+}
+#awards {
+  grid-area: awards;
+}
+#skillSet {
+  grid-area: skillSet;
+}
+
+.main .bottomSection > div {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 1);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 1);
+  box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 1);
+}
+
+.wrapper {
+  background-color: #f9f9f9;
+  padding: 16px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 20px;
+  line-height: 1.7;
+}
+
+.number {
+  top: -10px;
+  left: -10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #f9f9f9;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+  color: #2596be;
+}
+
+.main .bottomSection > div h3 {
+  color: #111111;
+}
+
+.main .bottomSection ul {
+  margin-left: 20px;
+}
+
+.bottomSection ion-icon {
+  font-size: 20px !important;
+  color: #2596be !important;
+}
+
+.detail {
+  flex: 1;
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 860px) {
+  .main .topSection {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main .bottomSection {
+    display: block;
+  }
+  .main .bottomSection > div {
+    margin: 20px 10px;
+  }
+  .main .topSection .leftText .info {
+    line-height: 2;
+  }
+}
+@media (max-width: 450px) {
+  .main {
+    width: 95%;
+  }
+  body {
+    padding: 16px;
+  }
+  .main img {
+    height: 150px;
+  }
+  .main .topSection {
+    padding: 20px;
+  }
+  .main .topSection .leftText {
+    line-height: 1.5;
+  }
+  .main .topSection .leftText h1 {
+    font-size: 1.5rem;
+  }
+  .main .bottomSection {
+    padding: 20px;
+  }
+  .main .bottomSection > div {
+    padding: 40px 15px;
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .icon {
+    position: absolute;
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 1);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 1);
+    box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 1);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+  }
+}
